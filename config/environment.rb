@@ -11,11 +11,11 @@ module Concerns
       self.find_by_name(name) ? self.find_by_name(name) : self.create(name)
     end
 
-    def self.all
+    def all
       @@all
     end
 
-    def self.destroy_all
+    def destroy_all
       @@all.clear
     end
 
@@ -24,7 +24,7 @@ module Concerns
       self
     end
 
-    def self.create(name)
+    def create(name)
       self.new(name).save
     end
   end
